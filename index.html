@@ -3,27 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon's Laboratory</title>
+    <title>Moon's Laboratory :: Spatial Optimization Research Archive</title>
     <style>
-        body { 
-            background-color: #0d1117; color: #c9d1d9; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            height: 100vh; margin: 0; 
+        /* Retro Dark Mode Style */
+        body {
+            background-color: #0d1117; /* GitHub Dark Background */
+            color: #c9d1d9; /* Light Text */
+            font-family: 'Consolas', 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
         }
-        h1 { font-size: 2.5rem; border-bottom: 1px solid #30363d; padding-bottom: 20px; }
-        a { color: #58a6ff; text-decoration: none; font-size: 1.2rem; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 { color: #58a6ff; border-bottom: 2px solid #30363d; padding-bottom: 15px; font-size: 2.2em; }
+        h3 { color: #2ecc71; margin-top: 35px; border-bottom: 1px dashed #30363d; padding-bottom: 5px; font-size: 1.4em;}
+        a { color: #58a6ff; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .container { text-align: center; }
+        .nav { margin-bottom: 30px; padding: 10px 0; border-top: 1px solid #30363d; }
+        .nav a { padding: 5px 10px; border: 1px solid #58a6ff; margin-right: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #161b22;
+        }
+        th, td {
+            border: 1px solid #30363d;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 0.95em;
+        }
+        th { background-color: #21262d; }
+        .status-ok { color: #2ecc71; }
+        .status-prog { color: #f1c40f; }
+        .mission { border-left: 3px solid #58a6ff; padding-left: 15px; margin-top: 20px; line-height: 1.6; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Moon's Laboratory</h1>
-        <p>Welcome to the research archive of Moonjinri.</p>
-        <p>Under Construction...</p>
-        <br>
-        <p>📂 <a href="http://moonhyuk.blog" target="_blank">Visit Moon's Archive (Blog)</a></p>
+
+<div class="container">
+
+    <h1>Moon's Laboratory :: Spatial Optimization Research</h1>
+
+    <div class="nav">
+        <a href="#about">ABOUT</a>
+        <a href="#publications">PUBLICATIONS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="http://moonhyuk.blog" target="_blank">ARCHIVE (Blog)</a>
     </div>
+
+    <div class="mission" id="about">
+        <p>// Mission Statement :: GIS & 최적화의 융합 엔진</p>
+        <p>저는 지리학적 공간 분석 능력과 산업공학적 최적화 모델링 능력을 융합하여, 복잡한 시스템(SCM, ITS, 에너지 인프라)에 대한 최적의 입지 및 운영 방안을 제시하는 연구를 수행합니다.</p>
+        <p><strong>CNU 지리학과 (GPA 3.89/4.5)</strong> &amp; **산업공학 복수전공.**</p>
+    </div>
+
+
+    <h3 id="publications">0x01. Research Publications & Thesis</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>논문 제목 (Title)</th>
+                <th>유형</th>
+                <th>상태</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P-01</td>
+                <td>광주 지역 태양광 최적 입지 선정에 관한 연구: Logit 모형 기반</td>
+                <td>학술지 논문</td>
+                <td class="status-prog">투고 예정 (현대사회과학연구)</td>
+            </tr>
+            <tr>
+                <td>P-02</td>
+                <td>도시 계획에서의 인구 이동 예측 모델링 (공저)</td>
+                <td>학술지 논문</td>
+                <td class="status-prog">작성 중</td>
+            </tr>
+            <tr>
+                <td>P-03</td>
+                <td>산업공학 졸업 논문: SCM 최적화를 위한 시뮬레이션 기반 모델 개발</td>
+                <td>학위 논문</td>
+                <td class="status-prog">작성 중 (26년 1학기 예정)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 id="projects">0x02. Selected Research Projects</h3>
+    
+    <h4>[A] Spatial Location & Optimization (FLP)</h4>
+    <p>GIS 데이터를 활용하여 태양광 입지, 물류 거점 등 시설물의 최적 입지 후보지를 도출하는 모델 개발. (Methodology: Logit/Mixed Logit, GIS Data Processing)</p>
+    
+    <h4>[B] System Modeling & Forecasting</h4>
+    <p>VR 기기 소비자 선호 분석을 통한 수요 예측 모델 개발 및 SCM 시스템에의 적용. (Methodology: 통계적 예측 모델링, Python)</p>
+
+
+    <h3 id="skills">0x03. Core Competencies & Skills</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>영역</th>
+                <th>세부 역량</th>
+                <th>주요 증빙 (최고 성적/자격증)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Methodology</td>
+                <td>Logit/Mixed Logit 모델링, 시뮬레이션, 회귀분석</td>
+                <td>확률통계 (A0), 데이터분석과응용 (B+)</td>
+            </tr>
+            <tr>
+                <td>Spatial/GIS</td>
+                <td>GIS 데이터 처리, 원격탐사, 측량 기술</td>
+                <td>GIS 응용 및 실습 (A+), 측량/지적 기사 (국가공인)</td>
+            </tr>
+            <tr>
+                <td>Programming</td>
+                <td>Python (Pandas, Scikit-learn), 객체지향 설계</td>
+                <td>객체지향프로그래밍 (A0), 데이터베이스설계 (A+)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3 id="contact">0x04. Contact</h3>
+    <p>Email: [여기에 이메일 주소를 입력하세요] / GitHub: [여기에 GitHub 아이디를 입력하세요] / LinkedIn (Optional)</p>
+    
+</div>
+
 </body>
 </html>
