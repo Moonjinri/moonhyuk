@@ -14,6 +14,11 @@
             --text-main: #e0e0e0;
             --text-sub: #9ca3af;
             --border-color: #2a2a2a;
+            
+            /* Badge Colors */
+            --badge-general: #6c5ce7;
+            --badge-kci: #f1c40f;
+            --badge-sci: #e74c3c;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -184,41 +189,27 @@
             color: #ccc;
         }
 
-        /* Projects List */
-        .project-item {
-            border-left: 2px solid var(--border-color);
-            padding-left: 1.5rem;
-            padding-bottom: 2.5rem;
-            position: relative;
+        /* Research Section Styles */
+        .research-category {
+            margin-bottom: 3rem;
         }
-        .project-item::before {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: 5px;
-            width: 8px;
-            height: 8px;
-            background: var(--border-color);
-            border-radius: 50%;
+        .research-category h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .project-item:hover::before { background: var(--accent-color); }
+        .cat-badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
         
-        .project-date {
-            font-size: 0.85rem;
-            color: var(--text-sub);
-            margin-bottom: 0.3rem;
-            display: block;
-        }
-        .project-title { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
-        .project-desc { font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.8rem; }
-        .project-link {
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            font-weight: 500;
-        }
-        .project-link:hover { text-decoration: underline; }
-
-        /* Publications Section */
         .pub-item {
             background: rgba(255, 255, 255, 0.03);
             padding: 1.2rem;
@@ -254,17 +245,29 @@
             white-space: nowrap;
         }
 
-        /* Sub-headers for Research */
-        .research-sub-title {
-            color: #fff;
-            font-size: 1.2rem;
-            margin-bottom: 1.2rem;
-            margin-top: 2.5rem;
-            display: flex;
-            align-items: center;
+        /* Projects List */
+        .project-item {
+            border-left: 2px solid var(--border-color);
+            padding-left: 1.5rem;
+            padding-bottom: 2.5rem;
+            position: relative;
         }
-        .research-sub-title:first-of-type { margin-top: 0; }
-        .sub-tag { font-size: 0.8rem; color: #777; margin-left: 10px; font-weight: 400; }
+        .project-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 50%;
+        }
+        .project-item:hover::before { background: var(--accent-color); }
+        .project-date { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 0.3rem; display: block; }
+        .project-title { font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
+        .project-desc { font-size: 0.95rem; color: var(--text-sub); margin-bottom: 0.8rem; }
+        .project-link { font-size: 0.85rem; color: var(--accent-color); font-weight: 500; }
+        .project-link:hover { text-decoration: underline; }
 
         /* Contact */
         .contact-box {
@@ -372,60 +375,66 @@
     </section>
 
     <section id="research">
-        <h2>Research Pipeline</h2>
+        <h2>Research</h2>
         
-        <h3 class="research-sub-title">
-            Journal Articles 
-            <span class="sub-tag">(In Preparation)</span>
-        </h3>
-
-        <div class="pub-item">
-            <div class="pub-info">
-                <div style="margin-bottom:0.5rem;">
-                    <span class="skill-tag" style="color:#6c5ce7; border:1px solid #6c5ce7; background:rgba(108,92,231,0.1);">General Journal</span>
-                    <span class="skill-tag">현대사회과학연구</span>
+        <div class="research-category">
+            <h3>01. Theses <span style="font-size:0.9rem; color:#777; font-weight:400;">(학위 논문)</span></h3>
+            <div class="pub-item">
+                <div class="pub-info">
+                    <h4>범죄발생밀도에 영향을 미치는 요인 분석 : 전국 229개 시군구 대상</h4>
+                    <span>지리학과 학사학위 청구논문 <a href="geo_bachelors_thesis.pdf" target="_blank" class="pdf-btn">PDF 보기</a></span>
                 </div>
-                <h4>강력범죄발생밀도에 영향을 미치는 요인 분석 : 전국 229개 시군구를 대상으로</h4>
-                <span>
-                    To be submitted to <em>Journal of Modern Social Sciences</em>
-                </span>
+                <div class="status-badge">2025.06 (예정)</div>
             </div>
-            <div class="status-badge">2025.12 (투고 예정)</div>
-        </div>
-
-        <div class="pub-item">
-            <div class="pub-info">
-                <div style="margin-bottom:0.5rem;">
-                    <span class="skill-tag" style="color:#f1c40f; border:1px solid #f1c40f; background:rgba(241,196,15,0.1);">Targeting KCI</span>
-                    <span class="skill-tag">Co-research with Ph.D. Student</span>
+            <div class="pub-item">
+                <div class="pub-info">
+                    <h4>산업공학과 졸업 연구</h4>
+                    <span>주제 선정 및 연구 계획 수립 단계</span>
                 </div>
-                <h4>[Working Title] 공간 최적화 및 수요 예측 관련 공동 연구</h4>
-                <span>
-                    Collaborative research on Spatial Optimization & Demand Forecasting
-                </span>
+                <div class="status-badge">2026.06 (예정)</div>
             </div>
-            <div class="status-badge">In Progress</div>
         </div>
 
-        <h3 class="research-sub-title">Theses</h3>
-
-        <div class="pub-item">
-            <div class="pub-info">
-                <h4>범죄발생밀도에 영향을 미치는 요인 분석 : 전국 229개 시군구 대상</h4>
-                <span>
-                    지리학과 학사학위 청구논문 
-                    <a href="geo_bachelors_thesis.pdf" target="_blank" class="pdf-btn">PDF 보기</a>
-                </span>
+        <div class="research-category">
+            <h3>02. General Journals <span style="font-size:0.9rem; color:#777; font-weight:400;">(기타 학술지)</span></h3>
+            <div class="pub-item">
+                <div class="pub-info">
+                    <div style="margin-bottom:0.4rem;">
+                        <span class="cat-badge" style="color:#6c5ce7; border:1px solid #6c5ce7; background:rgba(108,92,231,0.1);">현대사회과학연구</span>
+                    </div>
+                    <h4>강력범죄발생밀도에 영향을 미치는 요인 분석</h4>
+                    <span>To be submitted to <em>Journal of Modern Social Sciences</em></span>
+                </div>
+                <div class="status-badge">2025.12 (투고 예정)</div>
             </div>
-            <div class="status-badge">2025.06 (예정)</div>
         </div>
 
-        <div class="pub-item">
-            <div class="pub-info">
-                <h4>산업공학과 졸업 연구</h4>
-                <span>주제 선정 및 연구 계획 수립 단계</span>
+        <div class="research-category">
+            <h3>03. KCI <span style="font-size:0.9rem; color:#777; font-weight:400;">(한국연구재단 등재지)</span></h3>
+            <div class="pub-item">
+                <div class="pub-info">
+                    <div style="margin-bottom:0.4rem;">
+                        <span class="cat-badge" style="color:#f1c40f; border:1px solid #f1c40f; background:rgba(241,196,15,0.1);">Co-Research</span>
+                    </div>
+                    <h4>[Working Title] 공간 최적화 및 수요 예측 관련 공동 연구</h4>
+                    <span>Collaborative research with Ph.D. Student</span>
+                </div>
+                <div class="status-badge">In Progress</div>
             </div>
-            <div class="status-badge">2026.06 (예정)</div>
+        </div>
+
+        <div class="research-category">
+            <h3>04. SCI / SCIE <span style="font-size:0.9rem; color:#777; font-weight:400;">(국제 학술지)</span></h3>
+            <div class="pub-item">
+                <div class="pub-info">
+                    <div style="margin-bottom:0.4rem;">
+                        <span class="cat-badge" style="color:#e74c3c; border:1px solid #e74c3c; background:rgba(231,76,60,0.1);">Future Plan</span>
+                    </div>
+                    <h4>Optimization of Renewable Energy Supply Chain using GIS & ML</h4>
+                    <span>Targeting International Journal of Spatial Data Infrastructures Research</span>
+                </div>
+                <div class="status-badge">Research Goal</div>
+            </div>
         </div>
     </section>
 
