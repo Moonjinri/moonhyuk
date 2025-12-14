@@ -3,125 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project A :: Gwangju Solar Power Potential Analysis</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Gwangju Solar Power Analysis | Project</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* solar_project.html 보조 스타일 (스타일.css를 읽어오지 못할 경우 대비) */
-        .download-button { 
-            display: inline-block; 
-            padding: 10px 20px; 
-            background-color: #4CAF50; /* 녹색 계열로 변경 */
-            color: #ffffff; 
-            font-weight: bold; 
-            margin-top: 20px;
-            border-radius: 3px;
+        /* 프로젝트 페이지 전용 스타일 */
+        .project-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem; /* 헤더 공간 확보 */
         }
-        .back-link { margin-bottom: 20px; display: block; }
-        .summary-box { 
-            border-left: 3px solid #2ecc71; /* 녹색 강조 */
-            padding-left: 15px; 
-            margin-top: 20px; 
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+        }
+        .back-link:hover { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+
+        .project-header h1 {
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .summary-box {
+            background: rgba(46, 204, 113, 0.1); /* 녹색 배경 연하게 */
+            border-left: 4px solid #2ecc71; /* 녹색 강조 */
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-bottom: 3rem;
+            color: #dcdcdc;
             line-height: 1.6;
         }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-        th { background-color: #f2f2f2; }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: #2ecc71; /* 소제목 녹색 */
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        p, li { color: var(--text-sub); line-height: 1.7; margin-bottom: 0.8rem; }
+        ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+
+        /* 테이블 스타일 */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-sub);
+        }
+        .data-table th {
+            background-color: #1e1e24;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* 다운로드 버튼 */
+        .download-btn {
+            display: inline-block;
+            background-color: #2ecc71;
+            color: #000;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            transition: 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html#projects" class="back-link">← Back to Moon's Laboratory Projects</a>
+    <header>
+        <div class="logo">Moon Hyuk <span>| Portfolio</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="http://moonhyuk.blog" target="_blank" class="blog-link">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Project A :: 광주 첨단지구 아파트 태양광 잠재 발전량 분석</h1>
-    
-    <div class="summary-box">
-        <p><strong>연구 개요:</strong> 고밀도 도시 지역의 에너지 자립도 향상을 목표로, 광주 첨단지구 내 아파트 단지를 대상으로 태양광 발전 잠재력을 분석했습니다. 기존의 단순 면적 기반 분석의 한계를 극복하고, 수치표면모형(DSM)과 GIS를 활용하여 건물의 경사, 방위, 주변 건물로 인한 음영 효과를 정밀하게 반영했습니다. 최종적으로 효율적인 태양광 패널 보급 우선순위 결정을 위한 근거를 제공합니다.</p>
+    <div class="project-container">
+        <a href="index.html#projects" class="back-link">← Back to Projects List</a>
+
+        <div class="project-header">
+            <h1>광주 첨단지구 아파트<br>태양광 잠재 발전량 분석</h1>
+        </div>
+
+        <div class="summary-box">
+            <p><strong>[연구 개요]</strong> 고밀도 도시 지역의 에너지 자립도 향상을 목표로, 광주 첨단지구 내 아파트 단지를 대상으로 태양광 발전 잠재력을 분석했습니다. 기존의 단순 면적 기반 분석의 한계를 극복하고, 수치표면모형(DSM)과 GIS를 활용하여 건물의 경사, 방위, 주변 건물로 인한 음영 효과를 정밀하게 반영했습니다. 최종적으로 효율적인 태양광 패널 보급 우선순위 결정을 위한 근거를 제공합니다.</p>
+        </div>
+
+        <h3>01. Key Methodology</h3>
+        <h4>주요 분석 전제 및 조건</h4>
+        <p>태양광 잠재 발전량($PPG$) 산정을 위해 다음과 같은 전제조건이 적용되었습니다.</p>
+        <ul>
+            <li><strong>유효 활용 면적:</strong> 옥상 면적의 30%</li>
+            <li><strong>시스템 효율:</strong> 75% 일괄 적용</li>
+            <li><strong>분석 시점:</strong> 일조 조건이 극단적인 동지와 하지의 일일 일사량을 기반으로 분석</li>
+            <li><strong>산정 공식:</strong> PPG = AS * (RA * 0.3) * 0.75 <br><span style="font-size:0.8rem;">(AS: 1㎡당 평균 일사량, RA: 옥상 면적)</span></li>
+        </ul>
+
+        <h3>02. Analysis Results</h3>
+        <h4>핵심 분석 결과 (총 발전량 vs. 발전 효율)</h4>
+        <p>분석 결과, 총 발전량은 단지 규모에 비례했으나, 발전 효율은 3차원 공간 특성(일조 조건)에 따라 다르게 나타났습니다.</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>지표</th>
+                    <th>기준 시점</th>
+                    <th>최대 단지 (Max)</th>
+                    <th>값 (Value)</th>
+                    <th>최소 단지 (Min)</th>
+                    <th>평균 (Avg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>총 발전량 (kWh/day)</td>
+                    <td>하지</td>
+                    <td>라인1차</td>
+                    <td>16,723.86</td>
+                    <td>벽산</td>
+                    <td>6,515.77</td>
+                </tr>
+                <tr>
+                    <td>총 발전량 (kWh/day)</td>
+                    <td>동지</td>
+                    <td>라인1차</td>
+                    <td>3,454.76</td>
+                    <td>벽산</td>
+                    <td>520.39</td>
+                </tr>
+                <tr>
+                    <td>발전 효율 (kWh/㎡)</td>
+                    <td>하지</td>
+                    <td>일신아파트</td>
+                    <td>1.93</td>
+                    <td>라인6차</td>
+                    <td>0.88</td>
+                </tr>
+                <tr>
+                    <td>발전 효율 (kWh/㎡)</td>
+                    <td>동지</td>
+                    <td>일신아파트</td>
+                    <td>0.39</td>
+                    <td>라인6차</td>
+                    <td>0.17</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p style="background:#222; padding:1rem; border-radius:4px; border:1px solid #333;">
+            👉 <strong>Insight:</strong> 일신아파트는 옥상 면적이 작더라도 건물 배치와 방위가 태양광 수광에 유리하여 동지/하지 모두에서 가장 높은 발전 효율을 기록했습니다. 반면, 총 발전량 최대 단지인 라인1차는 하지 효율이 평균보다 낮게 나타났습니다.
+        </p>
+
+        <h3>03. Conclusion & Future Work</h3>
+        <h4>전략적 시사점</h4>
+        <p>
+            설비 보급 우선 순위는 총 잠재량(규모)뿐만 아니라 주변 지형지물과 경사를 모두 고려한 발전 효율을 함께 고려해야 함을 시사합니다. 
+            라인1차와 같은 대형 단지는 도시 전체의 총 발전 목표 달성을 위한 전략적 거점 역할을 할 수 있으므로, 효율이 낮더라도 보급 대상지에 포함할 필요가 있습니다.
+        </p>
+
+        <h4>연구 한계 및 향후 계획</h4>
+        <p>
+            본 연구에서는 태양광 패널의 가격, 설치 비용, 운영 비용 등 경제적 타당성 요소가 제외되었습니다. 
+            향후 연구에서는 이러한 경제성 분석을 포함하고, 동지·하지 두 시점의 한계를 넘어 연중 시간별 누적 일사량 분석을 통해 보다 정밀한 연 평균 잠재 발전량을 산출할 계획입니다.
+        </p>
+
+        <div style="text-align:center; margin-top:4rem; padding:2rem; background:#16161a; border-radius:8px; border:1px solid #333;">
+            <h4 style="margin-top:0; color:#fff;">📂 FINAL REPORT</h4>
+            <p>상세한 공간 분석 방법론, 일사량 래스터 데이터 및 시각화 지도는 PDF 보고서에서 확인 가능합니다.</p>
+            <a href="solar_project.pdf" class="download-btn" target="_blank">Download Final Report (PDF)</a>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center; color: #666; font-size: 0.9rem;">
+            Contact: moonhyuk@jnu.ac.kr
+        </div>
     </div>
-
-    <h3>0x01. Key Methodology & Results</h3>
-    
-    <h4>1. 주요 분석 전제 및 조건</h4>
-    <p>태양광 잠재 발전량($PPG$) 산정을 위해 다음과 같은 전제조건이 적용되었습니다[cite: 32].</p>
-    <ul>
-        <li>유효 활용 면적: 옥상 면적의 30%.</li>
-        <li>시스템 효율: 75% 일괄 적용.</li>
-        <li>분석 시점: 일조 조건이 극단적인 동지와 하지의 일일 일사량을 기반으로 분석을 수행했습니다.</li>
-        <li>산정 공식: PPG=AS*(RA*0.3)*0.75(AS: 1제곱미터 당 평균 일사량, RA: 옥상 면적, 0.3: 옥상 면적 활용률, 0.75: 시스템 효율).</li>
-    </ul>
-    
-    <h4>2. 핵심 분석 결과 (총 발전량 vs. 발전 효율)</h4>
-    <p>분석 결과, 총 발전량은 단지 규모에 비례했으나, 발전 효율은 3차원 공간 특성(일조 조건)에 따라 다르게 나타났습니다.</p>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>지표</th>
-                <th>기준 시점</th>
-                <th>최대 단지</th>
-                <th>최대 값</th>
-                <th>최소 단지</th>
-                <th>평균</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>총 발전량 (kWh/day)</td>
-                <td>하지</td>
-                <td>라인1차 아파트</td>
-                <td>16,723.86</td>
-                <td>벽산</td>
-                <td>6,515.77</td>
-            </tr>
-            <tr>
-                <td>총 발전량 (kWh/day)</td>
-                <td>동지</td>
-                <td>라인1차 아파트</td>
-                <td>3,454.76</td>
-                <td>벽산</td>
-                <td>520.39</td>
-            </tr>
-            <tr>
-                <td>발전 효율 (kWh/총면적)</td>
-                <td>하지</td>
-                <td>일신아파트</td>
-                <td>1.93</td>
-                <td>라인6차</td>
-                <td>0.88</td>
-            </tr>
-            <tr>
-                <td>발전 효율 (kWh/총면적)</td>
-                <td>동지</td>
-                <td>일신아파트</td>
-                <td>0.39</td>
-                <td>라인6차</td>
-                <td>0.17</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>👉 핵심 Insight: 일신아파트는 옥상 면적이 작더라도 건물 배치와 방위가 태양광 수광에 유리하여 동지/하지 모두에서 가장 높은 발전 효율을 기록했습니다. 반면, 총 발전량 최대 단지인 라인1차는 하지 효율이 평균보다 낮게 나타났습니다.</p>
-
-    
-    <h3>0x03. Strategic Implication & Future Work</h3>
-    
-    <h4>1. 보급 적지 선정 전략</h4>
-    <p>설비 보급 우선 순위는 총 잠재량(규모)뿐만 아니라 주변 지형지물과 경사를 모두 고려한 발전 효율을 함께 고려해야 함을 시사합니다. 라인1차와 같은 대형 단지는 도시 전체의 총 발전 목표 달성을 위한 전략적 거점 역할을 할 수 있으므로, 효율이 낮더라도 보급 대상지에 포함할 필요가 있습니다.</p>
-
-    <h4>2. 연구의 한계 및 향후 계획</h4>
-    <p>본 연구에서는 태양광 패널의 가격, 설치 비용, 운영 비용 등 경제적 타당성 요소가 제외되었습니다. 향후 연구에서는 이러한 경제성 분석을 포함하고, 동지·하지 두 시점의 한계를 넘어 연중 시간별 누적 일사량 분석을 통해 보다 정밀한 연 평균 잠재 발전량을 산출할 계획입니다.</p>
-
-    <h4 style="color: #4CAF50;">▶️ FINAL REPORT DOWNLOAD</h4>
-    <p>상세한 공간 분석 방법론, 일사량 래스터 데이터 및 단지별 발전량 시각화 지도는 PDF를 통해 확인하실 수 있습니다.</p>
-    
-    <a href="solar_project.pdf" class="download-button" target="_blank">
-        ⬇️ DOWNLOAD FINAL REPORT (PDF)
-    </a>
-
-    <h3 style="margin-top: 50px;">0x04. Contact</h3>
-    <p>Email: moonhyuk@jnu.ac.kr</p>
-    <p>Author: 문혁 (Moon, Hyuk)</p>
-
-</div>
 
 </body>
 </html>
