@@ -347,32 +347,34 @@ h2::before {
 }
 /* --- Footer Styles --- */
 footer {
-    background-color: var(--card-bg); /* 카드 배경색과 동일하게 */
+    background-color: var(--card-bg); /* 카드 배경색과 동일 */
     border-top: 1px solid var(--border-color);
     padding: 3rem 0;
     text-align: center;
-    margin-top: 5rem; /* 위 섹션과 간격 띄우기 */
+    margin-top: 6rem; /* 위 섹션과 충분한 간격 */
 }
 
 .footer-content p {
-    color: #666; /* 너무 튀지 않게 어두운 회색 */
-    font-size: 0.85rem;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem; /* 줄 간격 좁게 */
 }
 
 .footer-content strong {
-    color: var(--text-main); /* 회사 이름은 밝게 */
+    color: #fff;
     font-weight: 600;
 }
 
-.footer-content span {
-    color: var(--accent-color); /* Parents' Wallet은 포인트 컬러로 강조 (후원자니까) */
-    font-weight: 500;
+.footer-sub {
+    color: var(--text-sub) !important; /* 회색 폰트 */
+    font-size: 0.8rem !important; /* 작게 */
+    font-weight: 400;
 }
 
 /* 모바일 대응 */
 @media (max-width: 768px) {
     footer {
         padding: 2rem 0;
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 }
