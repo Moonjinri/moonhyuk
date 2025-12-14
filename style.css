@@ -284,3 +284,64 @@ h2::before {
     .status-badge { align-self: flex-start; margin-top: 5px; }
     .contact-box { flex-direction: column; text-align: center; gap: 1.5rem; }
 }
+/* --- Education Section Styles (Added) --- */
+.education-box {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.education-box h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+/* 아이콘 느낌의 장식 */
+.education-box h3::before {
+    content: '🎓';
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.education-box ul li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.edu-year {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 110px; /* 연도 부분 너비 고정 */
+    padding-top: 2px;
+}
+
+.edu-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.edu-detail strong {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.edu-desc {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .education-box ul li {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .edu-year {
+        min-width: auto;
+    }
+}
