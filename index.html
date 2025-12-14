@@ -6,7 +6,7 @@
     <title>Moon Hyuk | Portfolio</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
     <style>
-        /* Global Styles - 디자인은 그대로 유지 */
+        /* Global Styles */
         :root {
             --bg-color: #0f0f12;
             --card-bg: #16161a;
@@ -65,12 +65,12 @@
         /* Sections */
         section {
             padding: 6rem 5%;
-            max-width: 1000px; /* 폭을 살짝 줄여서 더 정돈된 느낌 */
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         h2 {
-            font-size: 1.8rem; /* 폰트 사이즈 살짝 줄임 */
+            font-size: 1.8rem;
             margin-bottom: 2.5rem;
             color: #fff;
             display: flex;
@@ -104,7 +104,7 @@
             text-transform: uppercase;
         }
         .hero h1 {
-            font-size: 3.5rem; /* 너무 거대하지 않게 조절 */
+            font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1.5rem;
@@ -135,7 +135,7 @@
         /* About Grid */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 2fr; /* 텍스트 공간 확보 */
+            grid-template-columns: 1fr 2fr;
             gap: 3rem;
             align-items: start;
         }
@@ -218,7 +218,7 @@
         }
         .project-link:hover { text-decoration: underline; }
 
-        /* Thesis Section (Simpler) */
+        /* Thesis Section - PDF Link Added */
         .pub-item {
             background: rgba(255, 255, 255, 0.03);
             padding: 1.2rem;
@@ -230,14 +230,28 @@
             align-items: center;
         }
         .pub-item:hover { border-color: var(--border-color); }
-        .pub-info h4 { color: #dcdcdc; font-size: 1rem; margin-bottom: 0.2rem; font-weight: 500;}
-        .pub-info span { font-size: 0.85rem; color: #777; }
+        .pub-info h4 { color: #dcdcdc; font-size: 1rem; margin-bottom: 0.4rem; font-weight: 500;}
+        .pub-info span { font-size: 0.85rem; color: #777; display: flex; align-items: center; gap: 10px; }
+        
+        /* PDF Button Style */
+        .pdf-btn {
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .pdf-btn:hover { background: var(--accent-color); color: #fff; }
+
         .status-badge {
             font-size: 0.75rem;
             padding: 0.2rem 0.6rem;
             border-radius: 4px;
             background: #25252b;
             color: #aaa;
+            white-space: nowrap; /* 날짜 줄바꿈 방지 */
+            margin-left: 1rem;
         }
 
         /* Contact */
@@ -259,7 +273,8 @@
             .hero h1 { font-size: 2.5rem; }
             .about-grid { grid-template-columns: 1fr; }
             nav ul { display: none; } 
-            .pub-item { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .pub-item { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+            .status-badge { margin-left: 0; }
             .contact-box { flex-direction: column; text-align: center; gap: 1.5rem; }
         }
     </style>
@@ -329,8 +344,7 @@
                 <div>
                     <span class="skill-tag">Spatial Data Mining</span>
                     <span class="skill-tag">QGIS/ArcGIS</span>
-                    <span class="skill-tag">지적산업기사</span>
-                    <span class="skill-tag">측량및지형공간정보기사</span>
+                    <span class="skill-tag">지적/측량기사</span>
                 </div>
             </div>
             <div class="card">
@@ -350,7 +364,10 @@
         <div class="pub-item">
             <div class="pub-info">
                 <h4>범죄발생밀도에 영향을 미치는 요인 분석 : 전국 229개 시군구 대상</h4>
-                <span>지리학과 학사학위 청구논문</span>
+                <span>
+                    지리학과 학사학위 청구논문 
+                    <a href="geo_bachelors_thesis.pdf" target="_blank" class="pdf-btn">PDF 보기</a>
+                </span>
             </div>
             <div class="status-badge">2025.06 (예정)</div>
         </div>
@@ -393,7 +410,7 @@
                 <span>Tel. 010-5420-3415</span>
                 <span>연구 및 진로 관련 조언은 언제나 감사히 듣겠습니다.</span>
             </div>
-            </div>
+        </div>
     </section>
 
 </body>
